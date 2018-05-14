@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* 欢迎页 */
+.wrapper .welcome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./img/bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    transition: top .5s;
+    z-index: 2;
+}
+.wrapper .welcome .start {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -150px;
+    width: 300px;
+    height: 180px;
+    background: url(./img/startGame.png) no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+/* 棋盘 */
+.main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(202, 160, 105, 1);
+    
+}
+
+.main .board {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    border-top: 1px solid #b25f27;
+    border-left: 1px solid #b25f27;
+    box-shadow: 0 0 3px #ccc;
+}
+/* 棋格 */
+.block {
+    float: left;
+    width: 79px;
+    height: 79px;
+    border-right: 1px solid #b25f27;
+    border-bottom: 1px solid #b25f27;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, .8);
+    background: url(./img/cao.jpg) no-repeat;
+}
+/* 炸弹 */
+.show {
+    background: url(./img/dilei.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+/* 数字 */
+.num {
+    background: #ecd0a1;
+    text-align: center;
+    line-height: 79px;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* 旗 */
+.flag {
+    background: url(./img/hongqi.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 成功或失败弹框 */
+.alert {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+.alert .alert-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -150px;
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    /* background: url(./img/over.jpg) no-repeat; */
+    background-size: 100% 100%;
+    
+}
+.alert .alert-img .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: url(./img/closeBtn.png) no-repeat;
+    background-size: 100% 100%;
+}
